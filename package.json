@@ -25,8 +25,13 @@
     "languages": [
       {
         "id": "automatic1111",
-        "aliases": ["Automatic1111 Markup", "automatic1111"],
-        "extensions": [".aut11"],
+        "aliases": [
+          "Automatic1111 Markup",
+          "automatic1111"
+        ],
+        "extensions": [
+          ".aut11"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -45,15 +50,14 @@
     "build": "webpack",
     "package": "npm run build && cp license.txt out/webpack && cd out/webpack && vsce package"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "^20.11.24",
     "eslint": "^8.57.0",
     "eslint-config-jaid": "^8.23.0",
     "fs-extra": "^11.2.0",
+    "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
-    "ts-loader": "^9.5.1",
     "yaml": "^2.4.0"
   },
   "engines": {
