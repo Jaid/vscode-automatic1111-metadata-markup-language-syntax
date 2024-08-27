@@ -1,0 +1,62 @@
+{
+  "name": "vscode-automatic1111-metadata-markup-syntax",
+  "displayName": "Automatic1111 Metadata Markup Syntax",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "VSCode syntax highlighting for Automatic1111 metadata markup language",
+  "keywords": [
+    "syntax",
+    "highlighting",
+    "automatic1111",
+    "metadata",
+    "markup",
+    "vsce",
+    "vscode-extension"
+  ],
+  "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
+  "homepage": "https://github.com/Jaid/vscode-automatic1111-metadata-markup-syntax",
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jaid/vscode-automatic1111-metadata-markup-syntax"
+  },
+  "main": "./out/webpack/index.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "automatic1111",
+        "aliases": ["Automatic1111 Markup", "automatic1111"],
+        "extensions": [".aut11"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "automatic1111",
+        "scopeName": "source.automatic1111",
+        "path": "./syntaxes/automatic1111.tmLanguage.yaml"
+      }
+    ]
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "scripts": {
+    "build": "webpack",
+    "package": "npm run build && cp license.txt out/webpack && cd out/webpack && vsce package"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "eslint-config-jaid": "^8.23.0",
+    "fs-extra": "^11.2.0",
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.3",
+    "ts-loader": "^9.5.1",
+    "yaml": "^2.4.0"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  }
+}
