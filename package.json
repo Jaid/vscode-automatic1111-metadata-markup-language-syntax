@@ -61,6 +61,7 @@
     "tsx": "^4.19.0",
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
+    "wireit": "^0.14.8",
     "yaml": "^2.4.0"
   },
   "engines": {
